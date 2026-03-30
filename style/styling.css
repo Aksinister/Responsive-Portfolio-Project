@@ -1,26 +1,64 @@
-
-h1 {
-  font-family: "Oswald", sans-serif;
-  font-weight: 400;
+:root {
+  --heading-font: "Oswald", sans-serif;
+  --body-font: "Noto Serif", serif;
+  --dark-colour: #3b060a;
+  --med-colour: #8a0000;
+  --lighter-colour: #c83f12;
+  --lightest-colour: #ffefc8;
 }
-h3{
-  font-family: "Noto Serif", serif;
-  font-weight: 100;
+
+body {
+  font-family: var(--body-font);
+}
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  font-family: var(--heading-font);
 }
 
-//.noto-serif-<uniquifier> {
-//font-family: "Noto Serif", serif;
-//font-optical-sizing: auto;
+.hero {
+  display: block;
+  margin: 28px auto;
+  text-align: center;
+  padding: 77px 28px;
+  max-width: 560px;
+  background: var(--lightest-colour);
+}
+.hero h1 {
+  font-size: 38px;
+  font-weight: 600;
+  color: var(--dark-colour);
+  padding: 40px 0px 0px 0px;
+}
+.hero p {
+  font-size: 16px;
+}
+
+.hero .btn {
+  border: none;
+  border-radius: 42px;
+  padding: 14px 21px;
+  color: var(--lightest-colour);
+  background-color: var(--lighter-colour);
+  font-family: var(--heading-font);
+  margin: 40px 10px 10px;
+}
+
+//.noto-serif-<uniquifier>
+{
+  //font-family: "Noto Serif", serif;
+  //font-optical-sizing: auto;
   font-weight: <weight>;
   font-style: normal;
-  font-variation-settings:
-    "wdth" 87.5;
+  font-variation-settings: "wdth" 87.5;
 }
 
-.oswald-<uniquifier> {
-font-family: "Oswald", sans-serif;
+.oswald-<uniquifier > {
+  font-family: "Oswald", sans-serif;
   font-optical-sizing: auto;
   font-weight: <weight>;
   font-style: normal;
 }
-
