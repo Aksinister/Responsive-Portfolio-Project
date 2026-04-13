@@ -48,7 +48,7 @@ h6 {
 .spacer {
   text-align: center;
 }
-.row {
+.homepage-projects .row {
   margin: 60px 30px;
 }
 
@@ -70,31 +70,29 @@ h6 {
   font-family: var(--heading-font);
 }
 
-.homepage-images {
+.images {
   padding: 30px;
   background-color: var(--lightest-colour);
   border-radius: 15px;
 }
-.about-section {
+.material {
   display: block;
   margin: 28px auto;
   text-align: center;
 }
-.about-section h1 {
+.material h1 {
   font-size: 77px;
   font-weight: 600;
   color: var(--med-colour);
-  padding: 40px 0px 0px 0px;
 }
-.about-section h2 {
+.material h2, h3,
+p {
   color: var(--dark-colour);
-}
-.about-section p {
-  color: #3b060a;
 }
 .about-image {
   width: 400px;
 }
+
 @media (max-width: 960px) {
   h1 {
     font-size: 45px !important;
@@ -111,23 +109,23 @@ h6 {
     margin: 0 auto;
     padding: 40px 0;
   }
-  .about-section h1 {
+  .material h1 {
     font-size: 42px !important;
   }
-  .about-section h2 {
+  .material h2 {
     font-size: 18px;
   }
-  .about-section p {
+  .material p {
     font-size: 14px;
   }
 }
 
 @media (min-width: 960px) {
-  .about-section {
+  .material .about {
     text-align: end;
   }
 
-  img {
+  .about-image {
     margin-top: 80px;
   }
 }
