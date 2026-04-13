@@ -85,12 +85,31 @@ h6 {
   font-weight: 600;
   color: var(--med-colour);
 }
-.material h2, h3,
+.material h2,
+h3,
 p {
   color: var(--dark-colour);
 }
 .about-image {
   width: 400px;
+}
+.contact-body {
+  background-color: var(--lightest-colour);
+  padding: 160px 50px;
+}
+
+.contact-body h3 {
+  color:var(--med-colour);
+}
+
+.contact-body i {
+  font-size: 63px;
+  color:var(--lighter-colour);
+}
+
+.contact-body a {
+  text-decoration: none;
+  color:var(--dark-colour);
 }
 
 @media (max-width: 960px) {
@@ -119,6 +138,7 @@ p {
     font-size: 14px;
   }
 }
+
 
 @media (min-width: 960px) {
   .material .about {
