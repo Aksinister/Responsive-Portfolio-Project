@@ -21,10 +21,8 @@ h6 {
 
 .hero {
   display: block;
-  margin: 28px auto;
   text-align: center;
-  padding: 80px 80px;
-  max-width: fit-content;
+  padding: 160px 20px;
   background: var(--lightest-colour);
 }
 .hero h1 {
