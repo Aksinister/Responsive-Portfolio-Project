@@ -5,10 +5,12 @@
   --med-colour: #8a0000;
   --lighter-colour: #c83f12;
   --lightest-colour: #ffefc8;
+  --background-white: #fffaef;
 }
 
 body {
   font-family: var(--body-font);
+  background-color: var(--background-white);
 }
 h1,
 h2,
@@ -18,17 +20,52 @@ h5,
 h6 {
   font-family: var(--heading-font);
 }
+ 
+.container {
+  max-width:none;
+  padding: 0;
+  margin: 0 auto;
+}
+.navbar {
+  background-color: var(--lightest-colour);
+}nav ul {
+  max-width: fit-content;
+}
+nav {
+  padding: 21px;
+}
+
+nav li {
+  display: inline;
+  line-height: 3;
+  padding: 7px;
+}
+
+nav a {
+  text-decoration: none;
+  color: var(--dark-colour);
+}
+
+nav a.active,
+nav a:hover {
+  color: var(--lighter-colour);
+}
+.material {
+  display: block;
+  margin: 28px auto;
+  text-align: center;
+}
 
 .hero {
   display: block;
   text-align: center;
   padding: 160px 20px;
-  background: var(--lightest-colour);
+  background: var(--lightest-colour, 0.5);
 }
 .hero h1 {
   font-size: 77px;
   font-weight: 600;
-  color: var(--dark-colour);
+  color: var(--med-colour);
   padding: 40px 0px 0px 0px;
 }
 
@@ -36,8 +73,8 @@ h6 {
   font-size: 30px;
 }
 
-.hero .btn {
-  border: none;
+.btn-primary {
+  border: var(--lighter-colour) 1.7px solid;
   border-radius: 42px;
   padding: 14px 21px;
   color: var(--lightest-colour);
@@ -45,8 +82,15 @@ h6 {
   font-family: var(--heading-font);
   margin: 40px 10px 10px;
 }
+
+.btn-primary:hover {
+  border: var(--med-colour) 1.7px solid;
+  color: var(--med-colour);
+  background-color: var(--lightest-colour);
+}
 .spacer {
   text-align: center;
+  margin: 60px 0;
 }
 .homepage-projects .row {
   margin: 60px 30px;
@@ -60,9 +104,8 @@ h6 {
 .proj-description p {
   padding: 20px 0;
 }
-
 .btn-second {
-  border: var(--med-colour) 1px solid;
+  border: var(--med-colour) 1.7px solid;
   border-radius: 42px;
   padding: 14px 21px;
   color: var(--med-colour);
@@ -70,23 +113,28 @@ h6 {
   font-family: var(--heading-font);
 }
 
+.btn-second:hover {
+  border: var(--med-colour) 1.7px solid;
+  color: var(--lightest-colour);
+  background-color: var(--med-colour);
+  transition: 140ms all ease-in-out;
+}
+
 .images {
-  padding: 30px;
   background-color: var(--lightest-colour);
   border-radius: 15px;
 }
-.material {
-  display: block;
-  margin: 28px auto;
-  text-align: center;
-}
+
 .material h1 {
   font-size: 77px;
   font-weight: 600;
   color: var(--med-colour);
 }
 .material h2,
-h3,
+h3 {
+  color: var(--med-colour);
+}
+.material,
 p {
   color: var(--dark-colour);
 }
@@ -99,18 +147,41 @@ p {
 }
 
 .contact-body h3 {
-  color:var(--med-colour);
+  color: var(--med-colour);
 }
 
 .contact-body i {
+  height: 54px;
+  width: 54;
   font-size: 63px;
-  color:var(--lighter-colour);
+  color: var(--lighter-colour);
 }
 
 .contact-body a {
   text-decoration: none;
-  color:var(--dark-colour);
+  color: var(--dark-colour);
 }
+
+.contact-body p {
+  padding: 20px 0;
+}
+
+.linkedin {
+  padding: 18px 0 38px 0;
+}
+
+.linkedin-contact {
+  padding-bottom: 20px;
+}
+
+.email{
+  padding: 38px 0 18px 0;
+}
+
+.email-contact {
+  padding-top: 20px;
+}
+
 
 @media (max-width: 960px) {
   h1 {
@@ -118,9 +189,6 @@ p {
   }
   .hero-subheading {
     font-size: 18px !important;
-  }
-  .spacer {
-    padding: 60px 0 0 0;
   }
   .proj-description {
     text-align: center;
@@ -138,7 +206,6 @@ p {
     font-size: 14px;
   }
 }
-
 
 @media (min-width: 960px) {
   .material .about {
