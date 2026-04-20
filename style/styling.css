@@ -22,7 +22,8 @@ h6 {
   font-family: var(--heading-font);
 }
 
-.container {
+.container,
+.navbar {
   max-width: none;
   padding: 0;
   margin: 0 auto;
@@ -73,17 +74,19 @@ nav a:hover {
   font-size: 18px;
 }
 
-.btn-primary {
+.btn-first {
   border: var(--lighter-colour) 1.7px solid;
   border-radius: 42px;
   padding: 14px 21px;
   color: var(--lightest-colour);
   background-color: var(--lighter-colour);
   font-family: var(--heading-font);
-  margin: 40px 10px 10px;
+  text-decoration: none;
+  text-align: center;
+  transition: 140ms all ease-in-out;
 }
 
-.btn-primary:hover {
+.btn-first:hover {
   border: var(--med-colour) 1.7px solid;
   color: var(--med-colour);
   background-color: var(--lightest-colour);
@@ -96,7 +99,6 @@ nav a:hover {
   margin: 60px 30px;
 }
 .proj-description {
-  text-align: center;
   display: block;
   margin: 0 auto;
   padding: 40px 20px;
@@ -200,7 +202,47 @@ h3 {
 .email-contact {
   padding-top: 20px;
 }
+footer {
+  display: block;
+}
 
+footer .contact-floater {
+  display: flex;
+  justify-content: space-evenly;
+  background-color: var(--lightest-colour);
+  margin: 63px;
+  padding: 63px 140px;
+}
+
+footer .email-footer,
+.socials {
+  display: flex;
+  justify-content: center;
+}
+footer .email-footer {
+  color: var(--dark-colour);
+  text-decoration: none;
+  font-size: 21px;
+  text-align: center;
+  transition: 140ms all ease-in-out;
+  margin: 42px 0;
+}
+footer .email-footer:hover {
+  color: var(--lighter-colour);
+}
+footer .socials i {
+  background-color: var(--lightest-colour);
+  border-radius: 50%;
+  color: var(--med-colour);
+  font-size: 21px;
+  margin: 14px;
+  padding: 12px;
+  transition: 140ms all ease-in-out;
+}
+footer .socials i:hover {
+  color: var(--lightest-colour);
+  background-color: var(--med-colour);
+}
 @media (max-width: 2000px) {
   .linkedin-contact {
     text-align: start;
@@ -211,8 +253,20 @@ h3 {
   .project-whole {
     padding: 21px 21px;
   }
-}
 
+  .linkedin-contact {
+    text-align: center;
+  }
+
+  .email-contact {
+    text-align: center;
+  }
+}
+@media (max-width: 992px) {
+  .proj-description {
+    text-align: center;
+  }
+}
 @media (max-width: 500px) {
   .material {
     margin: 0 28px;
@@ -231,14 +285,6 @@ h3 {
 
   .about-image {
     margin-top: 80px;
-  }
-
-  .linkedin-contact {
-    text-align: center;
-  }
-
-  .email-contact {
-    text-align: center;
   }
   .about-image {
     margin: 40px auto;
