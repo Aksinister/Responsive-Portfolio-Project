@@ -6,6 +6,7 @@
   --lighter-colour: #c83f12;
   --lightest-colour: #ffefc8;
   --background-white: #fffaef;
+  --transition: 140ms all ease-in-out;
 }
 
 body {
@@ -83,7 +84,7 @@ nav a:hover {
   font-family: var(--heading-font);
   text-decoration: none;
   text-align: center;
-  transition: 140ms all ease-in-out;
+  transition: var(--transition);
 }
 
 .btn-first:hover {
@@ -120,7 +121,7 @@ nav a:hover {
   border: var(--med-colour) 1.7px solid;
   color: var(--lightest-colour);
   background-color: var(--med-colour);
-  transition: 140ms all ease-in-out;
+  transition: var(--transition);
 }
 
 .images {
@@ -173,7 +174,7 @@ h3 {
 
 .contact-body i {
   height: 54px;
-  width: 54;
+  width: 54px;
   font-size: 63px;
   color: var(--lighter-colour);
 }
@@ -202,17 +203,24 @@ h3 {
 .email-contact {
   padding-top: 20px;
 }
-footer {
-  display: block;
-}
 
 footer .contact-floater {
   display: flex;
+  flex-direction: row;
+  text-align: center;
   justify-content: space-evenly;
   background-color: var(--lightest-colour);
   margin: 63px;
   padding: 63px 140px;
 }
+footer .floater-text,
+.floater-button {
+  display: inline-block;
+  margin: 0;
+  line-height: normal;
+  padding: 0;
+}
+
 
 footer .email-footer,
 .socials {
@@ -224,7 +232,7 @@ footer .email-footer {
   text-decoration: none;
   font-size: 21px;
   text-align: center;
-  transition: 140ms all ease-in-out;
+  transition: var(--transition);
   margin: 42px 0;
 }
 footer .email-footer:hover {
@@ -237,7 +245,7 @@ footer .socials i {
   font-size: 21px;
   margin: 14px;
   padding: 12px;
-  transition: 140ms all ease-in-out;
+  transition: var(--transition);
 }
 footer .socials i:hover {
   color: var(--lightest-colour);
@@ -265,6 +273,24 @@ footer .socials i:hover {
 @media (max-width: 992px) {
   .proj-description {
     text-align: center;
+  }
+}
+
+@media (max-width: 750px) {
+  
+  footer .contact-floater {
+    margin: 7px auto;
+    padding: 21px 28px;
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+  }
+  footer .floater-text,
+  .floater-button {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    margin: 20px auto;
   }
 }
 @media (max-width: 500px) {
