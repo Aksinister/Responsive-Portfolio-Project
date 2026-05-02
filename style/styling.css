@@ -6,7 +6,9 @@
   --lighter-colour: #c83f12;
   --lightest-colour: #ffefc8;
   --background-white: #fffaef;
-  --transition: 140ms all ease-in-out;
+  --transition: all 210ms ease-in-out;
+  --hover-animation:                                  
+;
 }
 
 body {
@@ -91,6 +93,7 @@ nav a:hover {
   border: var(--med-colour) 1.7px solid;
   color: var(--med-colour);
   background-color: var(--lightest-colour);
+  transform: scale(1.2);
 }
 .spacer {
   text-align: center;
@@ -122,6 +125,7 @@ nav a:hover {
   color: var(--lightest-colour);
   background-color: var(--med-colour);
   transition: var(--transition);
+  transform: scale(1.1);
 }
 
 .images {
@@ -129,11 +133,15 @@ nav a:hover {
   border-radius: 15px;
 }
 
-.about {
-  padding: 42px 0 0 0;
+.images-projects-page {
+  transition: all 140ms ease-in-out;
+}
+.images-projects-page:hover {
+  filter: contrast(84%);
+  transform: scale(1.1);
 }
 .material {
-  margin: 0 40px;
+  margin: 70px;
 }
 .material h1 {
   font-size: 42px;
@@ -151,7 +159,11 @@ h3 {
   color: var(--dark-colour);
   font-size: 14px;
 }
-
+.about-material {
+  display: flex;
+  margin: auto;
+  max-width: 1000px;
+}
 .about-headers {
   font-size: 18px !important;
 }
@@ -187,9 +199,13 @@ h3 {
 .contact-body p {
   padding: 20px 0;
 }
-
 .linkedin {
   padding: 18px 0 38px 0;
+  transition: var(--transition);
+}
+
+.linkedin:hover {
+  transform: scale(1.2);
 }
 
 .linkedin-contact {
@@ -198,12 +214,18 @@ h3 {
 
 .email {
   padding: 38px 0 18px 0;
+  transition: var(--transition);
+}
+.email:hover {
+  transform: scale(1.2);
 }
 
 .email-contact {
   padding-top: 20px;
 }
-
+footer {
+  padding-bottom: 60px;
+}
 footer .contact-floater {
   display: flex;
   flex-direction: row;
@@ -213,14 +235,12 @@ footer .contact-floater {
   margin: 63px;
   padding: 63px 140px;
 }
-footer .floater-text,
-.floater-button {
-  display: inline-block;
-  margin: 0;
-  line-height: normal;
-  padding: 0;
+footer .contact-floater .floater-text h3 {
+  font-size: 35px;
 }
-
+footer .floater-button .btn-first {
+  font-size: 21px;
+}
 
 footer .email-footer,
 .socials {
@@ -251,6 +271,13 @@ footer .socials i:hover {
   color: var(--lightest-colour);
   background-color: var(--med-colour);
 }
+footer p {
+  text-align: center;
+  padding-top: 28px;
+}
+footer p a {
+  color: var(--dark-colour);
+}
 @media (max-width: 2000px) {
   .linkedin-contact {
     text-align: start;
@@ -269,15 +296,20 @@ footer .socials i:hover {
   .email-contact {
     text-align: center;
   }
+  .about-material {
+    text-align: end;
+  }
 }
 @media (max-width: 992px) {
   .proj-description {
     text-align: center;
   }
+  .about-material {
+    text-align: center;
+  }
 }
 
 @media (max-width: 750px) {
-  
   footer .contact-floater {
     margin: 7px auto;
     padding: 21px 28px;
@@ -295,14 +327,10 @@ footer .socials i:hover {
 }
 @media (max-width: 500px) {
   .material {
-    margin: 0 28px;
+    margin: 40px 28px;
   }
   .material h1 {
     font-size: 30px !important;
-  }
-
-  .material .about {
-    text-align: end;
   }
 
   .project-whole {
