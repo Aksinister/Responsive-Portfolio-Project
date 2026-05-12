@@ -7,7 +7,7 @@
   --lightest-colour: #ffefc8;
   --background-white: #fffaef;
   --transition: all 210ms ease-in-out;
-  --hover-animation:                                  
+  --hover-animation:                                       
 ;
 }
 
@@ -15,6 +15,11 @@ body {
   max-width: none;
   font-family: var(--body-font);
   background-color: var(--background-white);
+  text-align: none;
+}
+
+.container {
+  max-width: fit-content;
 }
 h1,
 h2,
@@ -175,6 +180,11 @@ h3 {
 .about-image {
   width: 400px;
 }
+.image-container img {
+  display: block;
+  margin: 0 auto;
+}
+
 .contact-body {
   background-color: var(--lightest-colour);
   padding: 70px 50px;
@@ -278,7 +288,11 @@ footer p {
 footer p a {
   color: var(--dark-colour);
 }
-@media (max-width: 2000px) {
+@media (max-width: 2400px) {
+  .container {
+    max-width: none;
+    margin: 0 auto;
+  }
   .linkedin-contact {
     text-align: start;
   }
@@ -298,6 +312,9 @@ footer p a {
   }
   .about-material {
     text-align: end;
+  }
+  .about-image {
+    margin-top: 40px !important;
   }
 }
 @media (max-width: 992px) {
@@ -338,9 +355,10 @@ footer p a {
   }
 
   .about-image {
-    margin-top: 80px;
-  }
-  .about-image {
     margin: 40px auto;
+  }
+  footer {
+    display: flex;
+    justify-content: center;
   }
 }
